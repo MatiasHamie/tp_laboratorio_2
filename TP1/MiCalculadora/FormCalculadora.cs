@@ -40,5 +40,32 @@ namespace MiCalculadora
             string strResultado=resultado.ToString();
             lblResultado.Text = strResultado;
         }
+
+        private void btnConvertirABinario_Click(object sender, EventArgs e)
+        {
+            if (Calculadora.isDec(lblResultado.Text))
+            {
+                Numero numeroAConvertir = new Numero(lblResultado.Text);
+                string aux = numeroAConvertir.DecimalBinario(lblResultado.Text);
+
+                lblResultado.Text = aux;
+            }
+        }
+
+        private void Btn_ConvertirADecimal_Click(object sender, EventArgs e)
+        {
+            if (Calculadora.isBin(lblResultado.Text))
+            {
+                Numero numeroAConvertir = new Numero(lblResultado.Text);
+                string aux = numeroAConvertir.BinarioDecimal(lblResultado.Text);
+
+                lblResultado.Text = aux;
+            }
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

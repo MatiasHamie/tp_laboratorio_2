@@ -34,109 +34,147 @@
             this.btnOperar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnConvertirABinario = new System.Windows.Forms.Button();
+            this.btn_ConvertirADecimal = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNumero1
             // 
-            this.txtNumero1.Location = new System.Drawing.Point(31, 32);
+            this.txtNumero1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.txtNumero1.Location = new System.Drawing.Point(10, 40);
+            this.txtNumero1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumero1.Name = "txtNumero1";
-            this.txtNumero1.Size = new System.Drawing.Size(101, 20);
+            this.txtNumero1.Size = new System.Drawing.Size(117, 23);
             this.txtNumero1.TabIndex = 0;
+            this.txtNumero1.Text = "Ingresar 1er num";
+            this.txtNumero1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNumero2
             // 
-            this.txtNumero2.Location = new System.Drawing.Point(265, 32);
+            this.txtNumero2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.txtNumero2.Location = new System.Drawing.Point(283, 40);
+            this.txtNumero2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumero2.Name = "txtNumero2";
-            this.txtNumero2.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero2.Size = new System.Drawing.Size(116, 23);
             this.txtNumero2.TabIndex = 2;
+            this.txtNumero2.Text = "Ingresar 2do num";
             // 
             // cmbOperador
             // 
+            this.cmbOperador.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbOperador.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
             this.cmbOperador.FormattingEnabled = true;
             this.cmbOperador.Items.AddRange(new object[] {
             "+",
             "-",
             "*",
             "/"});
-            this.cmbOperador.Location = new System.Drawing.Point(138, 31);
+            this.cmbOperador.Location = new System.Drawing.Point(135, 39);
+            this.cmbOperador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbOperador.Name = "cmbOperador";
-            this.cmbOperador.Size = new System.Drawing.Size(121, 21);
-            this.cmbOperador.TabIndex = 3;
+            this.cmbOperador.Size = new System.Drawing.Size(140, 26);
+            this.cmbOperador.TabIndex = 1;
+            this.cmbOperador.Text = "Elegir operando";
             // 
             // btnOperar
             // 
-            this.btnOperar.Location = new System.Drawing.Point(31, 71);
+            this.btnOperar.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.btnOperar.Location = new System.Drawing.Point(10, 80);
+            this.btnOperar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOperar.Name = "btnOperar";
-            this.btnOperar.Size = new System.Drawing.Size(101, 23);
-            this.btnOperar.TabIndex = 4;
+            this.btnOperar.Size = new System.Drawing.Size(118, 48);
+            this.btnOperar.TabIndex = 3;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = true;
             this.btnOperar.Click += new System.EventHandler(this.BtnOperar_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(138, 71);
+            this.btnLimpiar.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.btnLimpiar.Location = new System.Drawing.Point(135, 80);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(121, 23);
-            this.btnLimpiar.TabIndex = 5;
+            this.btnLimpiar.Size = new System.Drawing.Size(141, 48);
+            this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(265, 71);
+            this.btnCerrar.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.btnCerrar.Location = new System.Drawing.Point(283, 80);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(101, 23);
-            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Size = new System.Drawing.Size(118, 48);
+            this.btnCerrar.TabIndex = 5;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // button6
+            // btnConvertirABinario
             // 
-            this.button6.Location = new System.Drawing.Point(31, 100);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 36);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Convertir a Binario";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnConvertirABinario.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.btnConvertirABinario.Location = new System.Drawing.Point(10, 144);
+            this.btnConvertirABinario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnConvertirABinario.Name = "btnConvertirABinario";
+            this.btnConvertirABinario.Size = new System.Drawing.Size(182, 50);
+            this.btnConvertirABinario.TabIndex = 6;
+            this.btnConvertirABinario.Text = "Convertir a Binario";
+            this.btnConvertirABinario.UseVisualStyleBackColor = true;
+            this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvertirABinario_Click);
             // 
-            // button4
+            // btn_ConvertirADecimal
             // 
-            this.button4.Location = new System.Drawing.Point(209, 100);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 36);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Convertir a Decimal";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_ConvertirADecimal.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConvertirADecimal.Location = new System.Drawing.Point(219, 144);
+            this.btn_ConvertirADecimal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_ConvertirADecimal.Name = "btn_ConvertirADecimal";
+            this.btn_ConvertirADecimal.Size = new System.Drawing.Size(182, 50);
+            this.btn_ConvertirADecimal.TabIndex = 7;
+            this.btn_ConvertirADecimal.Text = "Convertir a Decimal";
+            this.btn_ConvertirADecimal.UseVisualStyleBackColor = true;
+            this.btn_ConvertirADecimal.Click += new System.EventHandler(this.Btn_ConvertirADecimal_Click);
             // 
             // lblResultado
             // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(311, 9);
+            this.lblResultado.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.lblResultado.Location = new System.Drawing.Point(132, 7);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(55, 13);
+            this.lblResultado.Size = new System.Drawing.Size(267, 28);
             this.lblResultado.TabIndex = 9;
-            this.lblResultado.Text = "Resultado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.label1.Location = new System.Drawing.Point(45, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Resultado:";
             // 
             // FormCalculadora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 153);
+            this.ClientSize = new System.Drawing.Size(417, 205);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblResultado);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_ConvertirADecimal);
+            this.Controls.Add(this.btnConvertirABinario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnOperar);
             this.Controls.Add(this.cmbOperador);
             this.Controls.Add(this.txtNumero2);
             this.Controls.Add(this.txtNumero1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCalculadora";
@@ -155,9 +193,10 @@
         private System.Windows.Forms.Button btnOperar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnConvertirABinario;
+        private System.Windows.Forms.Button btn_ConvertirADecimal;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Label label1;
     }
 }
 

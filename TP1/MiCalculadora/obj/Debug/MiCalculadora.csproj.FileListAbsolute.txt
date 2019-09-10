@@ -11,3 +11,16 @@ C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1_MatiasHamie\MiCalcula
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1_MatiasHamie\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1_MatiasHamie\MiCalculadora\obj\Debug\MiCalculadora.exe
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1_MatiasHamie\MiCalculadora\obj\Debug\MiCalculadora.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\Entidades.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\Entidades.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.pdb

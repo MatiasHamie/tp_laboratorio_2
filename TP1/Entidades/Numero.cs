@@ -78,15 +78,14 @@ namespace Entidades
         public string BinarioDecimal(string binario)
         {
             char[] auxiliarBinario = binario.ToCharArray();//Paso a array
+            Array.Reverse(auxiliarBinario);
             double binarioConvertido = 0;
-
-            Array.Reverse(auxiliarBinario);//Lo invierto para 
 
             for (int indicePotencia = 0; indicePotencia < auxiliarBinario.Length; indicePotencia++)
             {
                 if (auxiliarBinario[indicePotencia] == '1')
                 {
-                    binarioConvertido += Math.Pow(indicePotencia, 2);
+                    binarioConvertido += Math.Pow(2, indicePotencia);
                 }
             }
 
@@ -103,28 +102,32 @@ namespace Entidades
         public string DecimalBinario(string numero)
         {
             Numero auxiliarConversion = new Numero(numero);
+            char[] arrayBinario;
             string resultadoBinario = "";
+            int aux = (int)auxiliarConversion.numero;
 
-            while (auxiliarConversion.numero > 1)
+            while (aux > 0)
             {
-                if (auxiliarConversion.numero % 2 == 0)
+                if (aux % 2 == 0)
                 {
                     resultadoBinario += "0";
                 }
-                else if(auxiliarConversion.numero==0)
+                else if(aux==0)
                 {
-                    resultadoBinario += "0";
+                    resultadoBinario = "0";
                 }
                 else
                 {
                     resultadoBinario += "1";
                 }
 
-                //Como la division no se le asigna a ningun numero, lo hago fuera de los if asignándolo
-                auxiliarConversion.numero /= 2;
+                aux = aux / 2;
             }
 
-            return resultadoBinario;
+            arrayBinario = resultadoBinario.ToCharArray();
+            Array.Reverse(arrayBinario);
+
+            return new string(arrayBinario);
         }
 
         public string DecimalBinario(double numero)

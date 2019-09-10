@@ -57,5 +57,24 @@ namespace Entidades
 
             return operadorValidado;
         }
+
+        public static bool isBin(string strBinary)
+        {
+            bool resp = true;
+            for(int i = 0; i < strBinary.Length; i++)
+            {
+                if(strBinary[i]!='0' && strBinary[i] != '1')
+                {
+                    resp = false;
+                    break;
+                }
+            }
+            return resp;
+        }
+
+        public static bool isDec(string strBinary)
+        {
+            return !(isBin(strBinary));
+        }
     }
 }
