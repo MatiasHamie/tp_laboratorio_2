@@ -8,6 +8,7 @@ namespace Entidades
 {
     public static class Calculadora
     {
+        public static int conversionFlag=0;//Lo uso para saber si se convirtio a binario o a decimal
         public static double Operar(Numero num1, Numero num2, string operador)
         {
             double resultado = 0;

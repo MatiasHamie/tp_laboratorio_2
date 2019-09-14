@@ -15,8 +15,6 @@ namespace Entidades
             set { this.numero = ValidarNumero(value.ToString()); }
         }
 
-
-
         #region Constructores
         public Numero()
         {

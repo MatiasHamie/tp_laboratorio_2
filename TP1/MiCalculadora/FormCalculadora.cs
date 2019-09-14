@@ -43,22 +43,22 @@ namespace MiCalculadora
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            if (Calculadora.isDec(lblResultado.Text))
+            if (Calculadora.conversionFlag == 0)
             {
                 Numero numeroAConvertir = new Numero(lblResultado.Text);
                 string aux = numeroAConvertir.DecimalBinario(lblResultado.Text);
-
+                Calculadora.conversionFlag = 1;
                 lblResultado.Text = aux;
             }
         }
 
         private void Btn_ConvertirADecimal_Click(object sender, EventArgs e)
         {
-            if (Calculadora.isBin(lblResultado.Text))
+            if (Calculadora.conversionFlag == 1) 
             {
                 Numero numeroAConvertir = new Numero(lblResultado.Text);
                 string aux = numeroAConvertir.BinarioDecimal(lblResultado.Text);
-
+                Calculadora.conversionFlag = 0;
                 lblResultado.Text = aux;
             }
         }
