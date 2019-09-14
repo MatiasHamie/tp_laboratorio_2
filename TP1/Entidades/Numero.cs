@@ -10,6 +10,13 @@ namespace Entidades
     {
         private double numero;
 
+        public double SetNumero
+        {
+            set { this.numero = ValidarNumero(value.ToString()); }
+        }
+
+
+
         #region Constructores
         public Numero()
         {
@@ -23,14 +30,9 @@ namespace Entidades
 
         public Numero(string strNumero)
         {
-            SetNumero(strNumero);
+            this.numero = double.Parse(strNumero);
         }
         #endregion
-
-        public void SetNumero(string strNumero)
-        {
-            this.numero = ValidarNumero(strNumero);
-        }
 
         private double ValidarNumero(string strNumero)
         {
