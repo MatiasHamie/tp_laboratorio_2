@@ -10,8 +10,8 @@ namespace EntidadesInstanciables
     public sealed class Alumno:Universitario
     {
         #region Campos
-        Universidad.EClases claseQueToma;
-        EEstadoCuenta estadoCuenta;
+        private Universidad.EClases claseQueToma;
+        private EEstadoCuenta estadoCuenta;
         #endregion
 
         #region TiposAnidados
@@ -42,7 +42,7 @@ namespace EntidadesInstanciables
 
         protected override string MostrarDatos()
         {
-            StringBuilder cadena = new StringBuilder(base.ToString());
+            StringBuilder cadena = new StringBuilder(base.MostrarDatos());
 
             cadena.AppendFormat($"ESTADO DE CUENTA: {this.estadoCuenta}\n");
             cadena.AppendLine(this.ParticiparEnClase());
@@ -52,7 +52,15 @@ namespace EntidadesInstanciables
 
         protected override string ParticiparEnClase()
         {
-            return $"TOMA CLASES DE: {this.claseQueToma}\n";
+            StringBuilder cadena = new StringBuilder();
+            cadena.AppendFormat($"ESTADO DE CUENTA: {this.estadoCuenta}\n");
+            cadena.AppendFormat($"TOMA CLASES DE: {this.claseQueToma}\n");
+            return cadena.ToString();
+        }
+
+        public override string ToString()
+        {
+            return this.MostrarDatos();
         }
 
         #region Sobrecarga de operadores

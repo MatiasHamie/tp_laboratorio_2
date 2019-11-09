@@ -87,8 +87,9 @@ namespace EntidadesAbstractas
         {
             StringBuilder cadena = new StringBuilder();
 
-            cadena.AppendLine("-- Persona --");
             cadena.AppendFormat($"NOMBRE COMPLETO: {this.apellido}, {this.nombre}\n");
+            cadena.AppendFormat($"Nacionalidad: {this.nacionalidad}\n");
+            cadena.AppendFormat($"DNI: {this.dni}\n");
 
             return cadena.ToString();
         }
