@@ -39,6 +39,10 @@ namespace EntidadesInstanciables
         }
         #endregion
 
+        /// <summary>
+        /// Muestra info de la Jornada
+        /// </summary>
+        /// <returns>string con info</returns>
         public override string ToString()
         {
             StringBuilder cadena = new StringBuilder();
@@ -56,12 +60,21 @@ namespace EntidadesInstanciables
         }
 
         #region Archivos
+        /// <summary>
+        /// Guarda en formato texto la info de la Jornada
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <returns>true si pudo guardarla, caso contrario false</returns>
         public static bool Guardar(Jornada jornada)
         {
             Texto archivoTexto = new Texto();
             return archivoTexto.Guardar("Jornada_Texto_Hamie", jornada.ToString());
         }
 
+        /// <summary>
+        /// Lee info de una Jornada
+        /// </summary>
+        /// <returns>datos de la jornada</returns>
         public static string Leer()
         {
             string datos = "";
@@ -74,6 +87,12 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Sobrecarga de operadores
+        /// <summary>
+        /// Compara si un alumno participa de la clase
+        /// </summary>
+        /// <param name="j">Jornada</param>
+        /// <param name="a">Alumno</param>
+        /// <returns>true si participa, caso contrario false</returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             foreach (Alumno alumnoAux in j.alumnos)
@@ -85,11 +104,24 @@ namespace EntidadesInstanciables
             }
             return false;
         }
+
+        /// <summary>
+        /// Compara si un alumno no participa de la clase
+        /// </summary>
+        /// <param name="j">Jornada</param>
+        /// <param name="a">Alumno</param>
+        /// <returns>true si no participa, caso contrario false</returns>
         public static bool operator !=(Jornada j, Alumno a)
         {
             return !(j == a);
         }
 
+        /// <summary>
+        /// Agrega un alumno a la Jornada
+        /// </summary>
+        /// <param name="j">Jornada</param>
+        /// <param name="a">Alumno</param>
+        /// <returns>Jornada con alumno nuevo</returns>
         public static Jornada operator +(Jornada j, Alumno a)
         {
             if (j != a)

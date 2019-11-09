@@ -40,6 +40,10 @@ namespace EntidadesInstanciables
         }
         #endregion
 
+        /// <summary>
+        /// Completa la información pasada por el método ParticiparEnClase()
+        /// </summary>
+        /// <returns>Info del alumno</returns>
         protected override string MostrarDatos()
         {
             StringBuilder cadena = new StringBuilder(base.MostrarDatos());
@@ -49,6 +53,10 @@ namespace EntidadesInstanciables
             return cadena.ToString();
         }
 
+        /// <summary>
+        /// Da información de la clase q participa el alumno
+        /// </summary>
+        /// <returns>Info del alumno</returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder cadena = new StringBuilder();
@@ -57,12 +65,22 @@ namespace EntidadesInstanciables
             return cadena.ToString();
         }
 
+        /// <summary>
+        /// Hace públicos los datos del alumno
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return this.MostrarDatos();
         }
 
         #region Sobrecarga de operadores
+        /// <summary>
+        /// Un alumno será igual a una clase si este la toma y no es deudor
+        /// </summary>
+        /// <param name="a">Alumno</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>true si no la toma, caso contrario false</returns>
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
             if (a.claseQueToma == clase)
@@ -76,6 +94,12 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Un alumno será distinto a una clase si no la toma
+        /// </summary>
+        /// <param name="a">Universidad</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>true si no la toma, caso contrario false</returns>
         public static bool operator !=(Alumno a, Universidad.EClases clase)
         {
             return !(a == clase);

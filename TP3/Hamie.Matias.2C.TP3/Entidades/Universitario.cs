@@ -26,6 +26,11 @@ namespace EntidadesAbstractas
 
         #endregion
 
+        /// <summary>
+        /// Compara que el tipo de dato sea universitario
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             return ((obj is Universitario) && (this == (Universitario)obj));
@@ -34,6 +39,10 @@ namespace EntidadesAbstractas
 
         protected abstract string ParticiparEnClase();
 
+        /// <summary>
+        /// Muestra datos del Universitario
+        /// </summary>
+        /// <returns>string con datos del universitario</returns>
         protected virtual string MostrarDatos()
         {
             StringBuilder cadena = new StringBuilder(base.ToString());
@@ -44,11 +53,23 @@ namespace EntidadesAbstractas
         }
 
         #region Sobrecarga de operadores
+        /// <summary>
+        /// Compara que dos universitarios sean iguales por DNI o Legajo
+        /// </summary>
+        /// <param name="pg1">Universitario 1</param>
+        /// <param name="pg2">Universitario 2</param>
+        /// <returns></returns>
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             return ((pg1.legajo == pg2.legajo) || (pg1.DNI == pg2.DNI));
         }
 
+        /// <summary>
+        /// Compara que dos universitarios sean distintos
+        /// </summary>
+        /// <param name="pg1">Universitario 1</param>
+        /// <param name="pg2">Universitario 2</param>
+        /// <returns></returns>
         public static bool operator !=(Universitario pg1, Universitario pg2)
         {
             return !(pg1 == pg2);

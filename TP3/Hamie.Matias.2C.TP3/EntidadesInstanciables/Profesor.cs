@@ -33,6 +33,10 @@ namespace EntidadesInstanciables
         }
         #endregion
 
+        /// <summary>
+        /// Le da formato a la info de la clase que da el profesor
+        /// </summary>
+        /// <returns>info de la clase</returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder cadena = new StringBuilder();
@@ -47,6 +51,9 @@ namespace EntidadesInstanciables
             return cadena.ToString();
         }
 
+        /// <summary>
+        /// Método que asigna dos clases random a un profesor
+        /// </summary>
         private void _randomClases()
         {
             //Para obtener la cantidad de strings del enum, uso GetNames para q me devuelva un array de strings
@@ -59,6 +66,10 @@ namespace EntidadesInstanciables
             }
         }
 
+        /// <summary>
+        /// Agrega informacion al metodo ParticiparEnClase()
+        /// </summary>
+        /// <returns>información completa del profesor</returns>
         protected override string MostrarDatos()
         {
             StringBuilder cadena = new StringBuilder(base.MostrarDatos());
@@ -68,21 +79,40 @@ namespace EntidadesInstanciables
             return cadena.ToString();
         }
 
+        /// <summary>
+        /// Hace pública la información del profesor
+        /// </summary>
+        /// <returns>info del profesor</returns>
         public override string ToString()
         {
             return this.MostrarDatos();
         }
 
         #region Sobrecargas de operadores
+        /// <summary>
+        /// Un profesor será igual a una clase si da esa clase
+        /// </summary>
+        /// <param name="i">Profesor</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>true si da la clase, caso contrario false</returns>
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
-            foreach (Universidad.EClases item in i.clasesDelDia)
+            foreach (Universidad.EClases c in i.clasesDelDia)
             {
-                if (item == clase) return true;
+                if (c == clase)
+                {
+                    return true;
+                }
             }
             return false;
         }
 
+        /// <summary>
+        /// Un profesor sera distinto a una clase si no da la misma
+        /// </summary>
+        /// <param name="i">Profesor</param>
+        /// <param name="clase">Universidad</param>
+        /// <returns>true si no da la clase, caso contrario false</returns>
         public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
             return !(i == clase);

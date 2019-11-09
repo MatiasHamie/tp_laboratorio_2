@@ -82,7 +82,10 @@ namespace EntidadesAbstractas
         }
         #endregion
 
-
+        /// <summary>
+        /// Muestra informacion de la persona
+        /// </summary>
+        /// <returns>Info de la persona</returns>
         public override string ToString()
         {
             StringBuilder cadena = new StringBuilder();
@@ -94,6 +97,12 @@ namespace EntidadesAbstractas
             return cadena.ToString();
         }
 
+        /// <summary>
+        /// Valida DNI Extranjero o Argentino
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad</param>
+        /// <param name="dato">DNI</param>
+        /// <returns>si es valido el DNI, caso contrario -1</returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             int retorno = -1;
@@ -124,6 +133,12 @@ namespace EntidadesAbstractas
             return retorno;
         }
 
+        /// <summary>
+        /// Valida DNI recibido como string
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad</param>
+        /// <param name="dato">DNI</param>
+        /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad,string dato)
         {
             int auxiliarDNI = 0;
@@ -136,6 +151,11 @@ namespace EntidadesAbstractas
             return auxiliarDNI;
         }
 
+        /// <summary>
+        /// Valida formato Nombre o Apellido
+        /// </summary>
+        /// <param name="dato">nombre o apellido</param>
+        /// <returns>El nombre o apellido, caso contrario null</returns>
         private string ValidarNombreApellido(string dato)
         {
             string retorno = dato;
