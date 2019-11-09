@@ -147,6 +147,10 @@ namespace EntidadesAbstractas
             {
                 return this.ValidarDni(nacionalidad, auxiliarDNI);
             }
+            else
+            {
+                throw new DniInvalidoException();
+            }
 
             return auxiliarDNI;
         }

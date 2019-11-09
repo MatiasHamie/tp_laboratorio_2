@@ -272,20 +272,18 @@ namespace EntidadesInstanciables
         public static Universidad operator +(Universidad g, Universidad.EClases clase)
         {
             Profesor profesorDisponible = (g == clase);
-            
-            if(!(profesorDisponible is null))
+
+            if (!(profesorDisponible is null))
             {
                 Jornada jornada = new Jornada(clase, profesorDisponible);
-                List<Alumno> jornadaNuevaAlumnos = new List<Alumno>();
 
                 foreach (Alumno a in g.alumnos)
                 {
                     if (a == clase)
                     {
-                        jornadaNuevaAlumnos.Add(a);
+                        jornada.Alumnos.Add(a);
                     }
                 }
-                jornada.Alumnos = jornadaNuevaAlumnos;
 
                 g.jornada.Add(jornada);
             }

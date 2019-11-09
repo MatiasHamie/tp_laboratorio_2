@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archivos", "Archivos\Archivos.csproj", "{EA3086EE-A82A-48A0-897B-E482E322E209}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitario", "TestU\TestUnitario.csproj", "{A7612CC9-EC3F-4C94-9747-6C9B3209F8DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EA3086EE-A82A-48A0-897B-E482E322E209}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA3086EE-A82A-48A0-897B-E482E322E209}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA3086EE-A82A-48A0-897B-E482E322E209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7612CC9-EC3F-4C94-9747-6C9B3209F8DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7612CC9-EC3F-4C94-9747-6C9B3209F8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7612CC9-EC3F-4C94-9747-6C9B3209F8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7612CC9-EC3F-4C94-9747-6C9B3209F8DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
