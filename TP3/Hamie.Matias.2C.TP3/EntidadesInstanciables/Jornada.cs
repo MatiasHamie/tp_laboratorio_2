@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Archivos;
 
 namespace EntidadesInstanciables
 {
@@ -27,10 +28,11 @@ namespace EntidadesInstanciables
         #region Constructores
         private Jornada()
         {
-            alumnos = new List<Alumno>();
+            this.alumnos = new List<Alumno>();
         }
 
         public Jornada(Universidad.EClases clase, Profesor instructor)
+            : this()
         {
             this.clase = clase;
             this.instructor = instructor;
@@ -54,20 +56,35 @@ namespace EntidadesInstanciables
             return cadena.ToString();
         }
 
-        public bool Guardar(Jornada jornada)
+        #region Archivos
+        public static bool Guardar(Jornada jornada)
         {
-             
+            Texto archivoTexto = new Texto();
+            return archivoTexto.Guardar("Jornada_Texto_Hamie", jornada.ToString());
         }
 
-        public string Leer()
+        public static string Leer()
         {
+            string datos = "";
 
+            Texto archivoTexto = new Texto();
+            archivoTexto.Leer("Jornada_Texto_Hamie", out datos);
+
+            return datos;
         }
+        #endregion
 
         #region Sobrecarga de operadores
         public static bool operator ==(Jornada j, Alumno a)
         {
-            return j.alumnos.Contains(a);
+            foreach (Alumno alumnoAux in j.alumnos)
+            {
+                if (alumnoAux == a)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         public static bool operator !=(Jornada j, Alumno a)
         {

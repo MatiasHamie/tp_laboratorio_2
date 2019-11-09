@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace EntidadesAbstractas
 {
@@ -102,11 +103,19 @@ namespace EntidadesAbstractas
                     {
                         retorno = dato;
                     }
+                    else
+                    {
+                        throw new NacionalidadInvalidaException("Dni argentino inválido");
+                    }
                     break;
                 case ENacionalidad.Extranjero:
                     if (dato > 90000000 && dato <= 99999999) 
                     {
                         retorno = dato;
+                    }
+                    else
+                    {
+                        throw new NacionalidadInvalidaException("Dni extranjero inválido");
                     }
                     break;
             }
@@ -116,7 +125,14 @@ namespace EntidadesAbstractas
 
         private int ValidarDni(ENacionalidad nacionalidad,string dato)
         {
-            return this.ValidarDni(nacionalidad, int.Parse(dato));
+            int auxiliarDNI = 0;
+
+            if(int.TryParse(dato,out auxiliarDNI))
+            {
+                return this.ValidarDni(nacionalidad, auxiliarDNI);
+            }
+
+            return auxiliarDNI;
         }
 
         private string ValidarNombreApellido(string dato)

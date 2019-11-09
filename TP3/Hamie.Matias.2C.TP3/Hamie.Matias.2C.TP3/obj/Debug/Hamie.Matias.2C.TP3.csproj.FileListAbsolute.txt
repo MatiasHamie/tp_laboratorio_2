@@ -1,0 +1,16 @@
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Hamie.Matias.2C.TP3.exe.config
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Hamie.Matias.2C.TP3.exe
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Hamie.Matias.2C.TP3.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Entidades.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\EntidadesInstanciables.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Excepciones.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Archivos.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\EntidadesInstanciables.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Entidades.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Excepciones.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\bin\Debug\Archivos.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\obj\Debug\Hamie.Matias.2C.TP3.csprojAssemblyReference.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\obj\Debug\Hamie.Matias.2C.TP3.csproj.CoreCompileInputs.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\obj\Debug\Hamie.Matias.2C.TP3.csproj.CopyComplete
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\obj\Debug\Hamie.Matias.2C.TP3.exe
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Hamie.Matias.2C.TP3\obj\Debug\Hamie.Matias.2C.TP3.pdb

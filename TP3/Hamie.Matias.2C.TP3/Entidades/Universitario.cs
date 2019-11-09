@@ -9,7 +9,7 @@ namespace EntidadesAbstractas
     public abstract class Universitario:Persona
     {
         #region Campos
-        int legajo;
+        private int legajo;
         #endregion
 
         #region Métodos
@@ -20,13 +20,16 @@ namespace EntidadesAbstractas
 
         public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : base(nombre, apellido, dni, nacionalidad)
-        { }
+        {
+            this.legajo = legajo;
+        }
 
         #endregion
 
         public override bool Equals(object obj)
         {
-            return (obj is Universitario && this == (Universitario)obj);
+            return ((obj is Universitario) && (this == (Universitario)obj));
+            //return obj is Universitario;
         }
 
         protected abstract string ParticiparEnClase();
@@ -43,12 +46,12 @@ namespace EntidadesAbstractas
         #region Sobrecarga de operadores
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
-            return (pg1.Equals(pg2) && (pg1.legajo == pg2.legajo) || (pg1.DNI == pg2.DNI));
+            return ((pg1.legajo == pg2.legajo) || (pg1.DNI == pg2.DNI));
         }
 
         public static bool operator !=(Universitario pg1, Universitario pg2)
         {
-            return pg1 != pg2;
+            return !(pg1 == pg2);
         }
         #endregion
 

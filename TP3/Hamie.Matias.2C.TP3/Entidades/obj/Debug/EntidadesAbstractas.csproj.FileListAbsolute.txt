@@ -1,0 +1,9 @@
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\bin\Debug\Entidades.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\bin\Debug\Entidades.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\obj\Debug\EntidadesAbstractas.csprojAssemblyReference.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\obj\Debug\EntidadesAbstractas.csproj.CoreCompileInputs.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\obj\Debug\Entidades.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\bin\Debug\Excepciones.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Entidades\obj\Debug\EntidadesAbstractas.csproj.CopyComplete

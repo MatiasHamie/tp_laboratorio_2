@@ -34,6 +34,7 @@ namespace HamieMatiasTP3
             {
                 Console.WriteLine(e.Message);
             }
+
             Alumno a4 = new Alumno(4, "Miguel", "Hernandez", "92264456", EntidadesAbstractas.Persona.ENacionalidad.Extranjero, Universidad.EClases.Legislacion, Alumno.EEstadoCuenta.AlDia);
             uni += a4;
             Alumno a5 = new Alumno(5, "Carlos", "Gonzalez", "12236456", EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion, Alumno.EEstadoCuenta.AlDia);
@@ -94,7 +95,7 @@ namespace HamieMatiasTP3
             }
             try
             {
-                intjornada = 0;
+                int jornada = 0;
                 Jornada.Guardar(uni[jornada]);
                 Console.WriteLine("Archivo de Jornada {0} guardado.", jornada);
                 //Console.WriteLine(Jornada.Leer());

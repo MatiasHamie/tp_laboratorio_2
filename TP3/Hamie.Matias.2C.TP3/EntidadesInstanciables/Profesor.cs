@@ -29,6 +29,7 @@ namespace EntidadesInstanciables
             : base(id, nombre, apellido, dni, nacionalidad)
         {
             this.clasesDelDia = new Queue<Universidad.EClases>();
+            this._randomClases();
         }
         #endregion
 
@@ -75,8 +76,11 @@ namespace EntidadesInstanciables
         #region Sobrecargas de operadores
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
-            //Si la cola contiene la clase devuelvo true
-            return (i.clasesDelDia.Contains(clase));
+            foreach (Universidad.EClases item in i.clasesDelDia)
+            {
+                if (item == clase) return true;
+            }
+            return false;
         }
 
         public static bool operator !=(Profesor i, Universidad.EClases clase)

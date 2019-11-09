@@ -20,10 +20,11 @@ namespace EntidadesInstanciables
         public List<Alumno> Alumnos { get { return this.alumnos; } set { this.alumnos = value; } }
         public List<Profesor> Instructores { get { return this.profesores; } set { this.profesores = value; } }
         public List<Jornada> Jornadas { get { return this.jornada; } set { this.jornada = value; } }
+
         public Jornada this[int index]
         {
-            get { return Jornadas[index]; }
-            set { Jornadas[index] = value; }
+            get { return this.jornada[index]; }
+            set { this.jornada[index] = value; }
         }
         #endregion
 
@@ -48,20 +49,21 @@ namespace EntidadesInstanciables
         }
         #endregion
 
-        public bool Guardar(Universidad uni)
+        public static bool Guardar(Universidad uni)
         {
             Xml<Universidad> xml = new Xml<Universidad>();
-            return xml.Guardar("Universidades.txt", uni);
+            return xml.Guardar("Universidades_Xml_Hamie.txt", uni);
         }
 
-        public Universidad Leer()
+        public static Universidad Leer()
         {
             Universidad universidad = new Universidad();
             Xml<Universidad> xml = new Xml<Universidad>();
-            xml.Leer("Universidades.txt", out universidad);
+            xml.Leer("Universidades_Xml_Hamie.txt", out universidad);
 
             return universidad;
         }
+
         static string MostrarDatos(Universidad uni)
         {
             StringBuilder cadena = new StringBuilder();
@@ -83,7 +85,15 @@ namespace EntidadesInstanciables
         #region Sobrecarga de operadores
         public static bool operator ==(Universidad g, Alumno a)
         {
-            return g.alumnos.Contains(a);
+            foreach (Alumno alumnoAux in g.alumnos)
+            {
+                if (alumnoAux == a)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
         public static bool operator !=(Universidad g, Alumno a)
         {
@@ -91,13 +101,21 @@ namespace EntidadesInstanciables
         }
         public static bool operator ==(Universidad g, Profesor i)
         {
-            return g.Instructores.Contains(i);
+            foreach (Profesor profesorAux in g.Instructores)
+            {
+                if (profesorAux == i)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
         public static bool operator !=(Universidad g, Profesor i)
         {
             return !(g == i);
         }
-        public static Profesor operator ==(Universidad g, EClases clase)
+        public static Profesor operator ==(Universidad g, Universidad.EClases clase)
         {
             try
             {
@@ -116,7 +134,7 @@ namespace EntidadesInstanciables
 
             return null;
         }
-        public static Profesor operator !=(Universidad g, EClases clase)
+        public static Profesor operator !=(Universidad g, Universidad.EClases clase)
         {
             try
             {
@@ -131,7 +149,7 @@ namespace EntidadesInstanciables
             catch (Exception)
             {
                 throw new SinProfesorException();
-            } 
+            }
             return null;
         }
 
@@ -140,10 +158,6 @@ namespace EntidadesInstanciables
             if (g != a)
             {
                 g.alumnos.Add(a);
-            }
-            else
-            {
-                throw new AlumnoRepetidoException();
             }
 
             return g;
@@ -155,15 +169,11 @@ namespace EntidadesInstanciables
             {
                 g.Instructores.Add(i);
             }
-            else
-            {
-                throw new SinProfesorException();
-            }
 
             return g;
         }
 
-        public static Universidad operator +(Universidad g, EClases clase)
+        public static Universidad operator +(Universidad g, Universidad.EClases clase)
         {
             Profesor profesorDisponible = (g == clase);
 
