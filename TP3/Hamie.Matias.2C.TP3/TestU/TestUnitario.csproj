@@ -54,6 +54,7 @@
     <Compile Include="DniInvalido.cs" />
     <Compile Include="SinProfesor.cs" />
     <Compile Include="NacionalidadInvalida.cs" />
+    <Compile Include="Null.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
