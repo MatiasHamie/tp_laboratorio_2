@@ -39,9 +39,9 @@ namespace EntidadesInstanciables
 
             cadena.AppendLine("CLASES DEL DIA: \n");
 
-            for (int i = 0; i < this.clasesDelDia.Count; i++)
+            foreach (Universidad.EClases c in clasesDelDia)
             {
-                cadena.AppendFormat($"{this.clasesDelDia.Dequeue()}\n");
+                cadena.AppendLine($"{c.ToString()}");
             }
 
             return cadena.ToString();
@@ -53,24 +53,24 @@ namespace EntidadesInstanciables
             //y con eso sacar el length que necesito para iterar y poner como max value en el random static
             int cantidadNombresClases = Enum.GetNames(typeof(Universidad.EClases)).Length;
 
-            for (int i = 0; i < cantidadNombresClases; i++)
+            for (int i = 0; i < 2; i++)
             {
-                this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(cantidadNombresClases));
+                this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(2));
             }
         }
 
         protected override string MostrarDatos()
         {
-            return this.ToString();
+            StringBuilder cadena = new StringBuilder(base.MostrarDatos());
+
+            cadena.AppendLine(this.ParticiparEnClase());
+
+            return cadena.ToString();
         }
 
         public override string ToString()
         {
-            StringBuilder cadena = new StringBuilder(base.MostrarDatos());
-
-            cadena.Append(this.ParticiparEnClase());
-
-            return cadena.ToString();
+            return this.MostrarDatos();
         }
 
         #region Sobrecargas de operadores

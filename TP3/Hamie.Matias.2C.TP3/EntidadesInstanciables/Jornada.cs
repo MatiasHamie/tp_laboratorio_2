@@ -41,14 +41,13 @@ namespace EntidadesInstanciables
 
         public override string ToString()
         {
-            StringBuilder cadena = new StringBuilder(base.ToString());
+            StringBuilder cadena = new StringBuilder();
 
-            cadena.AppendLine("- JORNADA -");
-            cadena.AppendFormat($"CLASE DE {this.clase} POR NOMBRE COMPLETO: {this.instructor}\n");
+            cadena.AppendFormat($"CLASE DE {this.clase} POR {this.instructor.ToString()}\n");
             cadena.AppendLine("ALUMNOS: ");
             foreach (Alumno item in this.alumnos)
             {
-                cadena.AppendFormat($"NOMBRE COMPLETO: {item.ToString()}");
+                cadena.AppendFormat($"{item.ToString()}");
             }
 
             cadena.AppendLine("<-------------->");

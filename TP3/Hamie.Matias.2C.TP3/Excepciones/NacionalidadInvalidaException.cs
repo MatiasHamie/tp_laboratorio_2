@@ -9,7 +9,7 @@ namespace Excepciones
     public class NacionalidadInvalidaException:Exception
     {
         public NacionalidadInvalidaException()
-            : this("Nacionalidad inválida") { }
+            : this("La nacionalidad no coincide con el numero del DNI") { }
 
         public NacionalidadInvalidaException(string message)
             : base(message) { }

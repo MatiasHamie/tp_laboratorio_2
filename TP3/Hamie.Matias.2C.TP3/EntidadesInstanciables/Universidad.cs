@@ -52,33 +52,51 @@ namespace EntidadesInstanciables
         public static bool Guardar(Universidad uni)
         {
             Xml<Universidad> xml = new Xml<Universidad>();
-            return xml.Guardar("Universidades_Xml_Hamie.txt", uni);
+            try
+            {
+                xml.Guardar("Universidades_Xml_Hamie.txt", uni);
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException(e);
+            }
+            return false;
         }
 
         public static Universidad Leer()
         {
             Universidad universidad = new Universidad();
-            Xml<Universidad> xml = new Xml<Universidad>();
-            xml.Leer("Universidades_Xml_Hamie.txt", out universidad);
-
-            return universidad;
+            try
+            {
+                Xml<Universidad> xml = new Xml<Universidad>();
+                xml.Leer("Universidades_Xml_Hamie.txt", out universidad);
+                return universidad;
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException(e);
+            }
         }
 
-        static string MostrarDatos(Universidad uni)
+        private string MostrarDatos(Universidad uni)
         {
             StringBuilder cadena = new StringBuilder();
+
+            cadena.AppendLine("JORNADA: ");
 
             foreach (Jornada jornada in uni.Jornadas)
             {
                 cadena.AppendLine(jornada.ToString());
             }
 
+            cadena.AppendLine("<--------------->");
+
             return cadena.ToString();
         }
 
         public override string ToString()
         {
-            return Universidad.MostrarDatos(this);
+            return this.MostrarDatos(this);
         }
 
 
@@ -159,6 +177,10 @@ namespace EntidadesInstanciables
             {
                 g.alumnos.Add(a);
             }
+            else
+            {
+                throw new AlumnoRepetidoException();
+            }
 
             return g;
         }
@@ -168,6 +190,10 @@ namespace EntidadesInstanciables
             if (g != i)
             {
                 g.Instructores.Add(i);
+            }
+            else
+            {
+                throw new SinProfesorException();
             }
 
             return g;

@@ -44,7 +44,6 @@ namespace EntidadesInstanciables
         {
             StringBuilder cadena = new StringBuilder(base.MostrarDatos());
 
-            cadena.AppendFormat($"ESTADO DE CUENTA: {this.estadoCuenta}\n");
             cadena.AppendLine(this.ParticiparEnClase());
 
             return cadena.ToString();
