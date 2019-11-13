@@ -12,19 +12,19 @@ namespace Archivos
     {
         public bool Guardar(string archivo, string datos)
         {
-            bool retorno = false;
+            bool retorno = true;
             try
             {
                 string pathArchivoEnEscritorio = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), archivo);
 
-                StreamWriter streamWriter = new StreamWriter(pathArchivoEnEscritorio);
+                StreamWriter streamWriter = new StreamWriter(pathArchivoEnEscritorio,true);
                 streamWriter.WriteLine(datos);
                 streamWriter.Close();
-                retorno = true;
             }
-            catch (Exception exc)
+            catch (Exception e)
             {
-                throw new ArchivosException(exc);
+                retorno = false;
+                throw new ArchivosException(e);
             }
 
             return retorno;
@@ -32,7 +32,7 @@ namespace Archivos
 
         public bool Leer(string archivo, out string datos)
         {
-            bool retorno = false;
+            bool retorno = true;
 
             try
             {
@@ -41,13 +41,12 @@ namespace Archivos
                 StreamReader streamReader = new StreamReader(pathArchivoEnEscritorio);
                 datos = streamReader.ReadToEnd();
                 streamReader.Close();
-
-                retorno = true;
             }
-            catch (Exception exc)
+            catch (Exception e)
             {
                 datos = default(string);
-                throw new ArchivosException(exc);
+                retorno = false;
+                throw new ArchivosException(e);
             }
 
             return retorno;

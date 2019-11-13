@@ -10,11 +10,11 @@ using Excepciones;
 
 namespace Archivos
 {
-    public class Xml<T>
+    public class Xml<T>:IArchivo<T>
     {
         public bool Guardar(string archivo, T datos)
         {
-            bool retorno = false;
+            bool retorno = true;
             try
             {
                 string pathArchivoEnEscritorio = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), archivo);
@@ -24,10 +24,10 @@ namespace Archivos
 
                 xmlSerializer.Serialize(xmlTextWriter, datos);
                 xmlTextWriter.Close();
-                retorno = true;
             }
             catch (Exception e)
             {
+                retorno = false;
                 throw new ArchivosException(e);
             }
 
@@ -36,7 +36,7 @@ namespace Archivos
 
         public bool Leer(string archivo, out T datos)
         {
-            bool retorno = false;
+            bool retorno = true;
 
             try
             {
@@ -47,11 +47,11 @@ namespace Archivos
 
                 datos = (T)xmlSerializer.Deserialize(xmlTextReader);
                 xmlTextReader.Close();
-                retorno = true;
             }
             catch (Exception e)
             {
                 datos = default(T);//Asigno default de un string = null
+                retorno = false;
                 throw new ArchivosException(e);
             }
 

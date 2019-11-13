@@ -59,7 +59,7 @@ namespace EntidadesInstanciables
             Xml<Universidad> xml = new Xml<Universidad>();
             try
             {
-                xml.Guardar("Universidades_Xml_Hamie.txt", uni);
+                xml.Guardar("Universidad.txt", uni);
             }
             catch (Exception e)
             {
@@ -78,7 +78,7 @@ namespace EntidadesInstanciables
             try
             {
                 Xml<Universidad> xml = new Xml<Universidad>();
-                xml.Leer("Universidades_Xml_Hamie.txt", out universidad);
+                xml.Leer("Universidades.txt", out universidad);
                 return universidad;
             }
             catch (Exception e)
@@ -186,22 +186,15 @@ namespace EntidadesInstanciables
         /// <returns> Retorna el primer profesor capaz de dar la clase</returns>
         public static Profesor operator ==(Universidad g, Universidad.EClases clase)
         {
-            try
+            foreach (Profesor profesor in g.Instructores)
             {
-                foreach (Profesor profesor in g.Instructores)
+                if (profesor == clase)
                 {
-                    if (profesor == clase)
-                    {
-                        return profesor;
-                    }
+                    return profesor;
                 }
             }
-            catch (Exception)
-            {
-                throw new SinProfesorException();
-            }
-
-            return null;
+            
+            throw new SinProfesorException();
         }
 
         /// <summary>
@@ -219,8 +212,8 @@ namespace EntidadesInstanciables
                     return profesor;
                 }
             }
-            
-            return null;
+
+            throw new SinProfesorException();
         }
 
         /// <summary>
@@ -272,22 +265,17 @@ namespace EntidadesInstanciables
         public static Universidad operator +(Universidad g, Universidad.EClases clase)
         {
             Profesor profesorDisponible = (g == clase);
+            Jornada jornada = new Jornada(clase, profesorDisponible);
 
-            if (!(profesorDisponible is null))
+            foreach (Alumno a in g.alumnos)
             {
-                Jornada jornada = new Jornada(clase, profesorDisponible);
-
-                foreach (Alumno a in g.alumnos)
+                if (a == clase)
                 {
-                    if (a == clase)
-                    {
-                        jornada.Alumnos.Add(a);
-                    }
+                    jornada.Alumnos.Add(a);
                 }
-
-                g.jornada.Add(jornada);
             }
 
+            g.jornada.Add(jornada);
             return g;
         }
         #endregion

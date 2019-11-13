@@ -102,7 +102,8 @@ namespace EntidadesInstanciables
         /// <returns>true si no la toma, caso contrario false</returns>
         public static bool operator !=(Alumno a, Universidad.EClases clase)
         {
-            return !(a == clase);
+            //return !(a == clase);
+            return (a.claseQueToma != clase);
         }
         #endregion
 
