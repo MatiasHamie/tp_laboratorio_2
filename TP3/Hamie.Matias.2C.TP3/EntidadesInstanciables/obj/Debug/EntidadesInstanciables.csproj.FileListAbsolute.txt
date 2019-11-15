@@ -11,3 +11,16 @@ C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\E
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csproj.CopyComplete
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Archivos.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Entidades.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Archivos.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Entidades.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\bin\Debug\Excepciones.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csprojAssemblyReference.cache
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csproj.CoreCompileInputs.cache
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csproj.CopyComplete
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb

@@ -68,7 +68,7 @@ namespace EntidadesInstanciables
         public static bool Guardar(Jornada jornada)
         {
             Texto archivoTexto = new Texto();
-            return archivoTexto.Guardar("Jornada", jornada.ToString());
+            return archivoTexto.Guardar("Jornada.txt", jornada.ToString());
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace EntidadesInstanciables
             string datos = "";
 
             Texto archivoTexto = new Texto();
-            archivoTexto.Leer("Jornada", out datos);
+            archivoTexto.Leer("Jornada.txt", out datos);
 
             return datos;
         }

@@ -7,3 +7,12 @@ C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\A
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csproj.CopyComplete
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.dll
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\bin\Debug\Archivos.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\bin\Debug\Archivos.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\bin\Debug\Excepciones.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\bin\Debug\Excepciones.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csproj.CopyComplete
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Archivos\obj\Debug\Archivos.pdb

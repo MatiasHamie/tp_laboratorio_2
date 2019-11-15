@@ -4,3 +4,9 @@ C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\E
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.dll
 C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\bin\Debug\Excepciones.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\bin\Debug\Excepciones.pdb
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.csprojAssemblyReference.cache
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.dll
+D:\MH\tp_laboratorio_2\TP3\Hamie.Matias.2C.TP3\Excepciones\obj\Debug\Excepciones.pdb
