@@ -1,0 +1,14 @@
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\FrmPpal.FrmPpal.resources
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\FrmPpal.Properties.Resources.resources
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\bin\Debug\FrmPpal.exe.config
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\bin\Debug\FrmPpal.exe
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\bin\Debug\FrmPpal.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\bin\Debug\Entidades.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\bin\Debug\Entidades.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\bin\Debug\Entidades.dll.config
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\MainCorreo.csproj.CopyComplete
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\FrmPpal.exe
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\FrmPpal\obj\Debug\FrmPpal.pdb

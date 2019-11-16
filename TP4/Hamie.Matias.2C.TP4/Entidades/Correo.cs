@@ -17,7 +17,7 @@ namespace Entidades
         #region Propiedades
         public List<Paquete> Paquetes
         {
-            get { return this.Paquetes; }
+            get { return this.paquetes; }
             set { this.paquetes = value; }
         }
         #endregion
@@ -25,7 +25,11 @@ namespace Entidades
         #region Métodos
         
         #region Constructores
-        public Correo() { }
+        public Correo()
+        {
+            mockPaquetes = new List<Thread>();
+            paquetes = new List<Paquete>();
+        }
         #endregion
 
         public void FinEntregas()
@@ -58,16 +62,23 @@ namespace Entidades
         #region Sobrecarga
         public static Correo operator +(Correo c, Paquete p)
         {
-            foreach (Paquete paqueteExtraido in c.paquetes)
+            if(c.paquetes is null)
             {
-                if (paqueteExtraido == p)
-                {
-                    throw new TrackingIdRepetidoException("El paquete ya está agregado a la lista");
-                }
+                c.paquetes.Add(p);
             }
+            else
+            {
+                foreach (Paquete paqueteExtraido in c.paquetes)
+                {
+                    if (paqueteExtraido == p)
+                    {
+                        throw new TrackingIdRepetidoException("El paquete ya está agregado a la lista");
+                    }
+                }
 
-            c.paquetes.Add(p);
-
+                c.paquetes.Add(p);
+            }
+            
             Thread t = new Thread(p.MockCicloDeVida);
             c.mockPaquetes.Add(t);
             t.Start();

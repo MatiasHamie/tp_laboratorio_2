@@ -20,31 +20,62 @@ namespace FrmPpal
             InitializeComponent();
         }
 
-
         #region Métodos
 
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
-            if (!(elemento is null))
+            rtbMostrar.Text = "";
+            foreach (Paquete paquete in this.correo.Paquetes)
             {
-                Paquete p = (Paquete)elemento;
-                rtbMostrar.Text += p.ToString();
-                GuardaString.Guardar(rtbMostrar.Text, "salida.txt");
+                rtbMostrar.Text += paquete.ToString();
             }
+
+            GuardaString.Guardar(rtbMostrar.Text, "salida.txt");
         }
 
         private void ActualizarEstados()
         {
+            string infoDelPaquete = "";
 
+            lstEstadoIngresado.Items.Clear();
+            lstEstadoEnViaje.Items.Clear();
+            lstEstadoEntregado.Items.Clear();
+
+            foreach (Paquete paquete in this.correo.Paquetes)
+            {
+                infoDelPaquete = paquete.ToString();
+
+                switch (paquete.Estado)
+                {
+                    case Paquete.EEstado.Ingresado:
+                        lstEstadoIngresado.Items.Add(infoDelPaquete);
+                        break;
+                    case Paquete.EEstado.EnViaje:
+                        lstEstadoEnViaje.Items.Add(infoDelPaquete);
+                        break;
+                    case Paquete.EEstado.Entregado:
+                        lstEstadoEntregado.Items.Add(infoDelPaquete);
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         #endregion
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             Paquete p = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
-            this.correo += p;
-            p.InformaEstado += paq_InformaEstado;
-            this.ActualizarEstados();
+            try
+            {
+                this.correo += p;
+                p.InformaEstado += paq_InformaEstado;
+                this.ActualizarEstados();
+            }
+            catch (TrackingIdRepetidoException)
+            {
+                MessageBox.Show("Paquete Repetido!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void paq_InformaEstado(object sender, EventArgs e)
@@ -68,6 +99,22 @@ namespace FrmPpal
         private void BtnMostrarTodos_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
+        }
+
+        private void FrmPpal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MostrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtbMostrar.Text = "";
+            string paquete =(string)lstEstadoEntregado.SelectedItem;
+
+            if (paquete!=null)
+            {
+                rtbMostrar.Text += paquete;
+            }
         }
     }
 }

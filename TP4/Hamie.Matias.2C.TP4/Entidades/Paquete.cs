@@ -53,21 +53,26 @@ namespace Entidades
         {
             this.direccionEntrega = direccionEntrega;
             this.trackingID = trackingID;
+            this.estado = Paquete.EEstado.Ingresado;
         }
         #endregion
 
         public void MockCicloDeVida()
         {
-            System.Threading.Thread.Sleep(2000);//No olvidar de cambiar los ms
-
-            switch (this.estado)
+            while (this.estado != Paquete.EEstado.Entregado)
             {
-                case EEstado.Ingresado:
-                    this.estado = EEstado.EnViaje;
-                    break;
-                case EEstado.EnViaje:
-                    this.estado = EEstado.Entregado;
-                    break;
+                System.Threading.Thread.Sleep(4000);
+
+                switch (this.estado)
+                {
+                    case EEstado.Ingresado:
+                        this.estado = EEstado.EnViaje;
+                        break;
+                    case EEstado.EnViaje:
+                        this.estado = EEstado.Entregado;
+                        break;
+                }
+                InformaEstado.Invoke(this,null);
             }
         }
 
@@ -80,7 +85,7 @@ namespace Entidades
         {
             Paquete p = (Paquete)elemento;
 
-            return String.Format("{0} para {1}", p.trackingID, p.direccionEntrega);
+            return String.Format("{0} para {1}\n", p.trackingID, p.direccionEntrega);
         }
 
         #region Sobrecarga

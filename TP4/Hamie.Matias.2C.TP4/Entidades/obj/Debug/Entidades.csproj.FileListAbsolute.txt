@@ -1,0 +1,7 @@
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\Entidades\bin\Debug\Entidades.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\Entidades\bin\Debug\Entidades.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\Entidades\obj\Debug\Entidades.dll
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\Entidades\obj\Debug\Entidades.pdb
+C:\Users\yotut\Desktop\Programming\C#\tp_laboratorio_2\TP4\Hamie.Matias.2C.TP4\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
