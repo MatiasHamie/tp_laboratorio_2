@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainCorreo", "FrmPpal\MainCorreo.csproj", "{46ACB1EF-E6A6-441E-BBBC-C108700D2CB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitarios", "TestUnitarios\TestUnitarios.csproj", "{69A4E677-D2B5-45F0-9288-6B9C865B4359}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{46ACB1EF-E6A6-441E-BBBC-C108700D2CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46ACB1EF-E6A6-441E-BBBC-C108700D2CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46ACB1EF-E6A6-441E-BBBC-C108700D2CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A4E677-D2B5-45F0-9288-6B9C865B4359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A4E677-D2B5-45F0-9288-6B9C865B4359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A4E677-D2B5-45F0-9288-6B9C865B4359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A4E677-D2B5-45F0-9288-6B9C865B4359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
