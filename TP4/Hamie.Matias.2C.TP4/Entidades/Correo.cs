@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Correo:IMostrar<List<Paquete>>
+    public class Correo : IMostrar<List<Paquete>>
     {
         #region Campos
         private List<Thread> mockPaquetes;
@@ -23,7 +23,7 @@ namespace Entidades
         #endregion
 
         #region Métodos
-        
+
         #region Constructores
         public Correo()
         {
@@ -32,11 +32,14 @@ namespace Entidades
         }
         #endregion
 
+        /// <summary>
+        /// Finaliza todos los threads que sigan abiertos
+        /// </summary>
         public void FinEntregas()
         {
             foreach (Thread t in this.mockPaquetes)
             {
-                if(t != null)
+                if (t != null)
                 {
                     if (t.IsAlive)
                     {
@@ -45,7 +48,12 @@ namespace Entidades
                 }
             }
         }
-
+    
+        /// <summary>
+        /// Muestra datos del paquete
+        /// </summary>
+        /// <param name="elementos"></param>
+        /// <returns>string datoPaquetes</returns>
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             Correo cAuxiliar = (Correo)elementos;
@@ -60,6 +68,13 @@ namespace Entidades
         }
 
         #region Sobrecarga
+
+        /// <summary>
+        /// Verifica y agrega un paquete al correo
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="p"></param>
+        /// <returns>Correo correo</returns>
         public static Correo operator +(Correo c, Paquete p)
         {
             if(c.paquetes is null)

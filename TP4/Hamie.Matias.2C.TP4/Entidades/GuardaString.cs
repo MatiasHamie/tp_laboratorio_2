@@ -10,6 +10,12 @@ namespace Entidades
     public static class GuardaString
     {
         #region Métodos
+        /// <summary>
+        /// Método de extensión, Guarda en un archivo ".txt" información de los paquetes
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <param name="archivo"></param>
+        /// <returns>true si pudo, caso contrario false</returns>
         public static bool Guardar(this string texto, string archivo)
         {
             if (!string.IsNullOrEmpty(archivo))

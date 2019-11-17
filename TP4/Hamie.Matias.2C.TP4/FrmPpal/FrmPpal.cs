@@ -22,6 +22,11 @@ namespace FrmPpal
 
         #region Métodos
 
+        /// <summary>
+        /// Muestra informacion del paquete deseado
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="elemento"></param>
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
             if (!(elemento is null))
@@ -30,6 +35,9 @@ namespace FrmPpal
             }
         }
 
+        /// <summary>
+        /// Borra los listBox y los actualiza según estado de los paquetes
+        /// </summary>
         private void ActualizarEstados()
         {
             string infoDelPaquete = "";
@@ -60,6 +68,11 @@ namespace FrmPpal
         }
         #endregion
 
+        /// <summary>
+        /// Agrega paquetes al correo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             Paquete p = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
@@ -75,6 +88,11 @@ namespace FrmPpal
             }
         }
 
+        /// <summary>
+        /// Handler del evento InformaEstado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void paq_InformaEstado(object sender, EventArgs e)
         {
             if (this.InvokeRequired)
@@ -93,6 +111,11 @@ namespace FrmPpal
             this.correo.FinEntregas();
         }
 
+        /// <summary>
+        /// Muestra información de todos los paquetes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnMostrarTodos_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
@@ -103,6 +126,11 @@ namespace FrmPpal
 
         }
 
+        /// <summary>
+        /// Muestra información del paquete seleccionado en el rtbMostrar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);

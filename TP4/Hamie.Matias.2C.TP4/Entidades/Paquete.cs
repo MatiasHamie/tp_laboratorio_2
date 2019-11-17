@@ -57,6 +57,10 @@ namespace Entidades
         }
         #endregion
 
+        /// <summary>
+        /// Actualiza cada 4 segundos el estado del paquete
+        /// Pasando por Ingresado -> EnViaje -> Entregado
+        /// </summary>
         public void MockCicloDeVida()
         {
             while (this.estado != Paquete.EEstado.Entregado)
@@ -78,11 +82,20 @@ namespace Entidades
             PaqueteDAO.Insertar(this);
         }
 
+        /// <summary>
+        /// Muestra datos del paquete
+        /// </summary>
+        /// <returns>string datosPaquete</returns>
         public override string ToString()
         {
             return this.MostrarDatos(this);
         }
 
+        /// <summary>
+        /// Retorna informacion del paquete
+        /// </summary>
+        /// <param name="elemento"></param>
+        /// <returns>string datosPaquete</returns>
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
             Paquete p = (Paquete)elemento;
@@ -91,11 +104,23 @@ namespace Entidades
         }
 
         #region Sobrecarga
+        /// <summary>
+        /// Dos paquetes serán iguales si tienen el mismo trackingID
+        /// </summary>
+        /// <param name="p1">Paquete 1</param>
+        /// <param name="p2">Paquete 2</param>
+        /// <returns>true si son iguales, caso contrario false</returns>
         public static bool operator ==(Paquete p1, Paquete p2)
         {
             return p1.trackingID == p2.trackingID;
         }
 
+        /// <summary>
+        /// Dos paquetes serán distintos si no tienen el mismo trackingID
+        /// </summary>
+        /// <param name="p1">Paquete 1</param>
+        /// <param name="p2">Paquete 2</param>
+        /// <returns>true si son iguales, caso contrario false</returns>
         public static bool operator !=(Paquete p1, Paquete p2)
         {
             return !(p1 == p2);

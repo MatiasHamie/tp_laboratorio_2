@@ -29,6 +29,11 @@ namespace Entidades
         }
         #endregion
 
+        /// <summary>
+        /// Inserta un paquete a la base de datos correo-sp-2017
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>true si pudo, caso contrario exception</returns>
         public static bool Insertar(Paquete p)
         {
             bool retorno = false;
