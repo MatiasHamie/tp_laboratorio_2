@@ -74,6 +74,8 @@ namespace Entidades
                 }
                 InformaEstado.Invoke(this,null);
             }
+            
+            PaqueteDAO.Insertar(this);
         }
 
         public override string ToString()
