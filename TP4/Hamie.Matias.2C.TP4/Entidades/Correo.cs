@@ -48,10 +48,10 @@ namespace Entidades
 
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
-            List<Paquete> listaPaquetesAuxiliar = (List<Paquete>)elementos;
+            Correo cAuxiliar = (Correo)elementos;
             string datosPaquetes = "";
 
-            foreach (Paquete p in listaPaquetesAuxiliar)
+            foreach (Paquete p in cAuxiliar.paquetes)
             {
                 datosPaquetes+=string.Format($"{p.TrackingID} para {p.DireccionEntrega} ({p.Estado.ToString()})\n");
             }

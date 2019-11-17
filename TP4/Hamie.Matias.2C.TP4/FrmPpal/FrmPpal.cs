@@ -24,13 +24,10 @@ namespace FrmPpal
 
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
-            rtbMostrar.Text = "";
-            foreach (Paquete paquete in this.correo.Paquetes)
+            if (!(elemento is null))
             {
-                rtbMostrar.Text += paquete.ToString();
+                rtbMostrar.Text += elemento.MostrarDatos(elemento);
             }
-
-            GuardaString.Guardar(rtbMostrar.Text, "salida.txt");
         }
 
         private void ActualizarEstados()
@@ -108,13 +105,14 @@ namespace FrmPpal
 
         private void MostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rtbMostrar.Text = "";
-            string paquete =(string)lstEstadoEntregado.SelectedItem;
+            this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
+            //rtbMostrar.Text = "";
+            //string paquete =(string)lstEstadoEntregado.SelectedItem;
 
-            if (paquete!=null)
-            {
-                rtbMostrar.Text += paquete;
-            }
+            //if (paquete!=null)
+            //{
+            //    rtbMostrar.Text += paquete;
+            //}
         }
     }
 }
