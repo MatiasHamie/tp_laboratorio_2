@@ -14,6 +14,11 @@ namespace Entidades
         private static SqlConnection conexion;
         #endregion
 
+        #region Delegado y Evento
+        public delegate void MensajeErrorSQL(string m);
+        public static event MensajeErrorSQL errorCargaBD;
+        #endregion
+
         #region Métodos
 
         #region Constructor
@@ -50,7 +55,7 @@ namespace Entidades
             }
             catch (Exception)
             {
-                throw new Exception("Problema al grabar información en Base de datos");
+                errorCargaBD.Invoke("Problema al grabar informacion en Base de Datos");
             }
             finally
             {

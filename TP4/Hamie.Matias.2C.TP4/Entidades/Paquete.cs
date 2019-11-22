@@ -76,9 +76,10 @@ namespace Entidades
                         this.estado = EEstado.Entregado;
                         break;
                 }
-                InformaEstado.Invoke(this,null);
+
+                InformaEstado.Invoke(this,new EventArgs());
             }
-            
+
             PaqueteDAO.Insertar(this);
         }
 

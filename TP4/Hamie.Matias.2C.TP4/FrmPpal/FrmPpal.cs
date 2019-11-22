@@ -8,16 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Entidades.PaqueteDAO;
 
 namespace FrmPpal
 {
     public partial class FrmPpal : Form
     {
-        Correo correo = new Correo();
+        Correo correo;
 
         public FrmPpal()
         {
             InitializeComponent();
+            correo = new Correo();
+            PaqueteDAO.errorCargaBD += PaqueteDAO_errorCargaBD;
+        }
+
+        private void PaqueteDAO_errorCargaBD(string m)
+        {
+            if (this.InvokeRequired)
+            {
+                MensajeErrorSQL d = new MensajeErrorSQL(PaqueteDAO_errorCargaBD);
+                this.Invoke(d, new object[] { m });
+            }
+            else
+            {
+                MessageBox.Show(m, "ERROR SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #region Métodos
@@ -31,7 +47,24 @@ namespace FrmPpal
         {
             if (!(elemento is null))
             {
-                rtbMostrar.Text += elemento.MostrarDatos(elemento);
+                try
+                {
+                    this.rtbMostrar.Text = elemento.MostrarDatos(elemento);
+                }
+                catch (Exception exc)
+                {
+                    throw new Exception("ERROR al mostrar el paquete seleccionado", exc);
+                }
+
+                
+                try
+                {
+                    this.rtbMostrar.Text.Guardar("salida.txt");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error al guardar archivo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -40,26 +73,22 @@ namespace FrmPpal
         /// </summary>
         private void ActualizarEstados()
         {
-            string infoDelPaquete = "";
-
             lstEstadoIngresado.Items.Clear();
             lstEstadoEnViaje.Items.Clear();
             lstEstadoEntregado.Items.Clear();
 
             foreach (Paquete paquete in this.correo.Paquetes)
             {
-                infoDelPaquete = paquete.ToString();
-
                 switch (paquete.Estado)
                 {
                     case Paquete.EEstado.Ingresado:
-                        lstEstadoIngresado.Items.Add(infoDelPaquete);
+                        lstEstadoIngresado.Items.Add(paquete);
                         break;
                     case Paquete.EEstado.EnViaje:
-                        lstEstadoEnViaje.Items.Add(infoDelPaquete);
+                        lstEstadoEnViaje.Items.Add(paquete);
                         break;
                     case Paquete.EEstado.Entregado:
-                        lstEstadoEntregado.Items.Add(infoDelPaquete);
+                        lstEstadoEntregado.Items.Add(paquete);
                         break;
                     default:
                         break;
@@ -75,16 +104,23 @@ namespace FrmPpal
         /// <param name="e"></param>
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            Paquete p = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
-            try
+            if(txtDireccion.Text!="" && mtxtTrackingID.Text != "")
             {
-                this.correo += p;
-                p.InformaEstado += paq_InformaEstado;
-                this.ActualizarEstados();
+                Paquete p = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
+                try
+                {
+                    this.correo += p;
+                    p.InformaEstado += paq_InformaEstado;
+                    this.ActualizarEstados();
+                }
+                catch (TrackingIdRepetidoException)
+                {
+                    MessageBox.Show("Paquete Repetido!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (TrackingIdRepetidoException)
+            else
             {
-                MessageBox.Show("Paquete Repetido!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falta informacion del paquete!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -118,7 +154,14 @@ namespace FrmPpal
         /// <param name="e"></param>
         private void BtnMostrarTodos_Click(object sender, EventArgs e)
         {
-            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
+            try
+            {
+                this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
+            }
+            catch (Exception exc)
+            {
+                throw new Exception("ERROR al querer mostrar paquetes!", exc);
+            }
         }
 
         private void FrmPpal_Load(object sender, EventArgs e)
@@ -133,14 +176,14 @@ namespace FrmPpal
         /// <param name="e"></param>
         private void MostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
-            //rtbMostrar.Text = "";
-            //string paquete =(string)lstEstadoEntregado.SelectedItem;
-
-            //if (paquete!=null)
-            //{
-            //    rtbMostrar.Text += paquete;
-            //}
+            try
+            {
+                this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
+            }
+            catch (Exception exc)
+            {
+                throw new Exception("ERROR al querer mostrar paquetes!", exc);
+            }
         }
     }
 }
